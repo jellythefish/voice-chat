@@ -9,8 +9,8 @@ Features:
 + The indication of speaking user in the console output.
 + Connection to certain voice chat **rooms**.
 
-Server and clients support connection via UDP sockets. Server receives data from clients and broadcasts is to all other
-clients in a certain voice chat room.
+Server and clients support connection via UDP sockets. Server receives data from clients and broadcasts it to all other
+clients in a voice chat room.
 
 Application is based on [Python Voice Chat](https://github.com/domage/soa-curriculum-2021/tree/main/examples/sockets-voice-chat).
 
@@ -52,15 +52,15 @@ python3 client-udp.py
 ### Server
 
 While running docker container with server you need to specify port 3000 or other in stdin corresponding to 
-forwarding port in **docker run*...* cmd.
+forwarding port in **docker run*...* command.
 ```cmd
 C:\Users\Slava\Desktop\voice-chat>docker run --rm -i -p 8000:3000/udp jellythefish/voice-chat
 Enter port number to run on --> 3000
 Running on IP: 172.17.0.2
 Running on port: 3000
 ```
-Then, to connect to the server you should use the ip address of the host machine in a local network, **not the one which is provided in console output
-of server!**.
+Then, to connect to the server you should use the ip address of the host machine in a local network, **not the one which is provided in the console output
+of the server!**.
 
 For example, in local network host machine with ip 192.168.1.18 receives connections on port 8000 and forwards it to 
 the destination 127.17.0.2:3000 which is docker container with the server.
@@ -87,7 +87,7 @@ Connected to server to room 0 successfully!
 Users online in room 0 : "test" (172.17.0.1:57873)
 ```
 
-At this step you should be good to go and talk and hear to other participants in a voice chat room.
+At this step you should be good to go and talk and hear other participants in a voice chat room.
 
 To disconnect from voice chat room just stop the execution of client-udp.py:
 Ctrl+C in Unix or Ctrl+Break in Windows.
