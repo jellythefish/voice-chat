@@ -142,13 +142,3 @@ class Client:
 
 
 client = Client()
-
-
-
-
-
-
-
-
-
-
